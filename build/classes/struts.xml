@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.objectFactory" value="spring"/>
+	<!-- 注册国际化文件 -->
+	<constant name="struts.custom.i18n.resources" value="message"></constant>
+	<package name="strutsDemo" extends="struts-default" namespace="/">
+		
+		
+		
+<!-- 		 <action name="downloadexport" class="com.ht.action.FiledownloadAction" method="downloadexport">   -->
+<!--         <result name="success" type="stream">   定义返回值为流 -->
+<!--             <param name="contentType">application/octet-stream</param>  返回文件类型 -->
+<!--             <param name="inputName">inputStream</param>  方法内部使用的流的名称 -->
+<!--             文件下载的处理方式  -->
+<!--             <param name="contentDisposition">attachment;filename="${fileName}"</param>     -->
+<!--             <param name="bufferSize">2048</param>  下载缓冲区的大小 -->
+<!--         </result>  -->
+<!--         <result name="error">error.jsp</result>  -->
+<!--     </action>  -->
+	
+	</package>
+</struts>

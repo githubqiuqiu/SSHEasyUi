@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+	<class name="com.ht.model.Role" table="role">
+		<id name="id" column="id">
+		<generator class="native"></generator>
+		</id>
+		<property name="rname"></property>
+		<property name="code"></property>
+		<property name="introduce"></property>
+	
+		<!-- 一个角色对应多个用户 -->
+		<set name="user" cascade="save-update" lazy="false">
+			<!-- 做为外键的字段 -->
+			<key column="rid"></key>
+			<!-- 多的那边的路径 -->
+			<one-to-many class="com.ht.model.User" />
+		</set>
+	
+	</class>
+</hibernate-mapping>

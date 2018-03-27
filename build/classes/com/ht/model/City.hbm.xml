@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.ht.model.City" table="city">
+	<id name="cid" column="cid">
+		<generator class="native"></generator>
+	</id>
+	<property name="cname" column="cname"></property>
+	<property name="pid" column="pid"></property>
+	
+<!-- 	<many-to-one name="provice" class="com.ht.model.Provice" column="pid" insert="false" update="false"></many-to-one> -->
+	
+<!-- 	 inverse为true，则本端不能维护关系  由多的一端维护关系 --> 
+<!-- 	<set name="county" inverse="true" cascade="save-update"> -->
+<!-- 	<key column="cid" not-null="true"/>   -->
+<!-- 	<one-to-many class="com.ht.model.County"/> -->
+<!-- 	</set> -->
+	
+</class>
+</hibernate-mapping>

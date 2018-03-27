@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.ht.model.Person" table="person">
+	<id name="id" column="id">
+	<generator class="native"></generator>
+	</id>
+	<property name="name"></property>
+	<property name="proviceid"></property>
+	<property name="cityid"></property>
+	<property name="countyid"></property>
+	<!-- 要级联插入person和card表  就要有cascade属性  column字段会自动在表里 生成-->
+	<many-to-one name="card" class="com.ht.model.Card" column="cardid"    cascade="all" unique="true"></many-to-one>
+	
+</class>
+</hibernate-mapping>
